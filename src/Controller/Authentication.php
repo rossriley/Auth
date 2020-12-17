@@ -317,7 +317,7 @@ class Authentication extends AbstractController
         }
 
         // if stage is complete and redirect:reset is set in extension configuration redirect there
-        if ($context->get('stage') == 'submitted' && $this->getAuthConfig()->getRedirectReset() != null) {
+        if ($context->get('stage') == 'reset' && $this->getAuthConfig()->getRedirectReset() != null) {
             return new RedirectResponse($this->getAuthConfig()->getRedirectReset());
         }
 
